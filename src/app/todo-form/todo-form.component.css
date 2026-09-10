@@ -1,0 +1,71 @@
+.form-card {
+  width: min(100%, 650px);
+  margin: 0 auto 34px;
+  padding: 25px 28px 23px;
+  border: 1px solid rgba(235, 234, 241, .8);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, .9);
+  box-shadow: 0 8px 23px rgba(45, 37, 92, .06);
+}
+
+.form-heading h1 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.form-heading .eyebrow {
+  margin-bottom: 8px;
+  font-size: .6rem;
+  letter-spacing: .02em;
+  text-transform: none;
+}
+
+.form-fields {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 23px;
+  margin: 21px 0 20px;
+}
+
+.form-fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #373441;
+  font-size: .65rem;
+  font-weight: 700;
+}
+
+.form-fields input {
+  width: 100%;
+  padding: 10px 11px;
+  border: 1px solid #e6e4ec;
+  border-radius: 5px;
+  outline: 0;
+  color: #383541;
+  background: #fff;
+  font-size: .65rem;
+}
+
+.form-fields input:focus {
+  border-color: var(--taskflow-purple);
+  box-shadow: 0 0 0 3px rgba(91, 70, 214, .1);
+}
+
+.add-button {
+  width: 100%;
+  padding: 10px;
+  font-size: .68rem;
+}
+
+@media (max-width: 600px) {
+  .form-card {
+    padding: 21px 18px;
+  }
+
+  .form-fields {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}

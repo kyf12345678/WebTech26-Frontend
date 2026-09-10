@@ -1,0 +1,137 @@
+.home-page {
+  padding-top: 25px;
+}
+
+.hero {
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.hero .eyebrow {
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  margin: 0 0 7px;
+  font-size: 1.28rem;
+  font-weight: 700;
+}
+
+.hero > p:last-child {
+  margin: 0;
+  color: var(--taskflow-muted);
+  font-size: .69rem;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.filters button {
+  display: flex;
+  min-height: 58px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6px;
+  padding: 11px 15px;
+  border: 1px solid #eeeef4;
+  border-radius: 7px;
+  color: var(--taskflow-muted);
+  background: rgba(255, 255, 255, .86);
+  text-align: left;
+  box-shadow: 0 7px 18px rgba(45, 37, 92, .04);
+}
+
+.filters button:nth-child(2) {
+  background: rgba(255, 235, 235, .88);
+}
+
+.filters button:nth-child(3) {
+  background: rgba(232, 248, 237, .88);
+}
+
+.filters button:hover,
+.filters button.selected {
+  border-color: #dcd7f4;
+  box-shadow: 0 9px 22px rgba(45, 37, 92, .08);
+}
+
+.filters button span {
+  font-size: .6rem;
+}
+
+.filters button strong {
+  color: var(--taskflow-ink);
+  font-size: .95rem;
+}
+
+.task-section {
+  margin: 0 auto;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.section-heading a {
+  color: var(--taskflow-muted);
+  font-size: .62rem;
+  text-decoration: none;
+}
+
+.section-heading a:hover {
+  color: var(--taskflow-purple);
+}
+
+.task-list {
+  overflow: hidden;
+  border-radius: 7px;
+  box-shadow: 0 8px 23px rgba(45, 37, 92, .05);
+}
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  padding: 32px 20px;
+  flex-direction: column;
+  gap: 5px;
+  background: rgba(255, 255, 255, .82);
+}
+
+.empty-state i {
+  margin-bottom: 5px;
+  color: var(--taskflow-purple);
+  font-size: 1.2rem;
+}
+
+.empty-state strong {
+  font-size: .72rem;
+}
+
+.empty-state span {
+  color: var(--taskflow-muted);
+  font-size: .62rem;
+}
+
+@media (max-width: 500px) {
+  .filters {
+    gap: 7px;
+  }
+
+  .filters button {
+    padding: 9px;
+  }
+}

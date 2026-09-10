@@ -1,0 +1,54 @@
+<div class="page-shell home-page">
+  <section class="hero">
+    <h1>Make today count.</h1>
+    <p>Small steps. Real progress.</p>
+  </section>
+
+  <app-progress
+    [completed]="completedCount"
+    [total]="totalCount">
+  </app-progress>
+
+  <section class="filters" aria-label="Task filters">
+    <button
+      type="button"
+      [class.selected]="filter() === 'all'"
+      (click)="setFilter('all')">
+      <span>All Tasks</span>
+      <strong>0</strong>
+    </button>
+
+    <button
+      type="button"
+      [class.selected]="filter() === 'active'"
+      (click)="setFilter('active')">
+      <span>Active Tasks</span>
+      <strong>0</strong>
+    </button>
+
+    <button
+      type="button"
+      [class.selected]="filter() === 'completed'"
+      (click)="setFilter('completed')">
+      <span>Completed Tasks</span>
+      <strong>0</strong>
+    </button>
+  </section>
+
+  @if (showTasks()) {
+    <section class="task-section">
+      <div class="section-heading">
+        <h2>Tasks</h2>
+        <a routerLink="/tasks">Manage tasks</a>
+      </div>
+
+      <div class="task-list">
+        <div class="empty-state">
+          <i class="bi bi-stars"></i>
+          <strong>A clear slate</strong>
+          <span>No tasks yet.</span>
+        </div>
+      </div>
+    </section>
+  }
+</div>

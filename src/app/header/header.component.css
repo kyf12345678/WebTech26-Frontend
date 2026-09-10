@@ -1,0 +1,51 @@
+.site-header {
+  width: min(100% - 40px, 980px);
+  margin: 0 auto;
+  padding: 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #292733;
+  font-size: .76rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 21px;
+  height: 21px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--taskflow-purple);
+  font-size: .75rem;
+}
+
+.new-task-button {
+  border-radius: 6px;
+  padding: 9px 15px;
+  color: #000000;
+  background: var(--taskflow-purple);
+  font-size: .7rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 7px 16px rgba(91, 70, 214, .18);
+}
+
+.new-task-button:hover {
+  color: #000000;
+  background: var(--taskflow-purple-dark);
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    width: min(100% - 28px, 980px);
+  }
+}

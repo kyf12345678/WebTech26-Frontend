@@ -1,0 +1,14 @@
+<section class="form-card">
+  <div class="form-heading">
+    <h1>Add a new task</h1>
+  </div>
+  <div class="form-fields">
+    <label>Task title
+      <input #title type="text" placeholder="Add a new task" required>
+    </label>
+    <label>Due date (optional)
+      <input #dueDate type="date">
+    </label>
+  </div>
+  <button class="primary-button add-button" type="button" (click)="submit(title, dueDate)">Add Task</button>
+</section>

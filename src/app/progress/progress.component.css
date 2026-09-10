@@ -1,0 +1,47 @@
+.progress-card {
+  margin: 0 auto 14px;
+  padding: 18px 21px 15px;
+  border: 1px solid rgba(235, 234, 241, .7);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, .92);
+  box-shadow: 0 8px 23px rgba(45, 37, 92, .06);
+}
+
+.progress-copy {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.progress-copy h2 {
+  margin: 0 0 4px;
+  font-size: .72rem;
+  font-weight: 700;
+}
+
+.progress-copy p {
+  margin: 0;
+  color: var(--taskflow-muted);
+  font-size: .65rem;
+}
+
+.progress-copy strong {
+  color: #201d2d;
+  font-size: 1.02rem;
+}
+
+.progress-track {
+  height: 4px;
+  margin-top: 14px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #ebe9f3;
+}
+
+.progress-value {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--taskflow-purple);
+  transition: width .25s ease;
+}

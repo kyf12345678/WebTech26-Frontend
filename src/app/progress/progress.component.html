@@ -1,0 +1,12 @@
+<section class="progress-card">
+  <div class="progress-copy">
+    <div>
+      <h2>Your progress</h2>
+      <p>{{ completed() }} of {{ total() }} tasks complete</p>
+    </div>
+    <strong>{{ progressPercentage }}%</strong>
+  </div>
+  <div class="progress-track" aria-label="Task progress">
+    <div class="progress-value" [style.width.%]="progressPercentage"></div>
+  </div>
+</section>

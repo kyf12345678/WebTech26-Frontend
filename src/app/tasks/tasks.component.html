@@ -1,0 +1,19 @@
+<div class="page-shell tasks-page">
+  <a class="back-link" routerLink="/">
+    <i class="bi bi-arrow-left"></i> Go Back
+  </a>
+
+  <app-todo-form (addTodo)="addTodo($event)"></app-todo-form>
+
+  @if (message()) {
+    <p class="success-message">{{ message() }}</p>
+  }
+
+  <section class="all-tasks">
+    <h2>All your tasks</h2>
+
+    <div class="task-list">
+      <p class="empty-message">No tasks yet.</p>
+    </div>
+  </section>
+</div>

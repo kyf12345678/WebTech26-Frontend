@@ -1,0 +1,57 @@
+.tasks-page {
+  padding-top: 12px;
+}
+
+.back-link {
+  display: inline-block;
+  margin: 0 0 25px;
+  padding: 8px 14px;
+  color: #1e1d29;
+  background: #fff;
+  border: 1px solid #f0c928;
+  border-radius: 7px;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #1e1d29;
+  background: hsl(51, 100%, 86%);
+}
+
+
+
+.all-tasks {
+  width: min(100%, 650px);
+  margin: 0 auto;
+}
+
+.all-tasks h2 {
+  margin: 0 0 12px;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.task-list {
+  overflow: hidden;
+  border-radius: 7px;
+  box-shadow: 0 8px 23px rgba(45, 37, 92, .05);
+}
+
+.success-message {
+  width: min(100%, 650px);
+  margin: -17px auto 25px;
+  color: #528c66;
+  text-align: center;
+  font-size: .65rem;
+}
+
+.empty-message {
+  margin: 0;
+  padding: 25px;
+  color: var(--taskflow-muted);
+  background: #fff;
+  text-align: center;
+  font-size: .7rem;
+}
