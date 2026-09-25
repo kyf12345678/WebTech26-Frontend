@@ -13,7 +13,16 @@
     <h2>All your tasks</h2>
 
     <div class="task-list">
-      <p class="empty-message">No tasks yet.</p>
+      @for (todo of todos(); track todo._id) {
+        <app-todo-item
+          [todo]="todo"
+          [showDelete]="true"
+          (toggleTodo)="toggleTodo($event)"
+          (deleteTodo)="deleteTodo($event)">
+        </app-todo-item>
+      } @empty {
+        <p class="empty-message">No tasks yet.</p>
+      }
     </div>
   </section>
 </div>
