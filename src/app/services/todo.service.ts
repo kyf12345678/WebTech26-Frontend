@@ -3,7 +3,8 @@ import { Todo } from '../models/todo';
 
 @Injectable({ providedIn: 'root' })
 export class TodoService {
-  private readonly apiUrl = 'http://localhost:3000/todos';
+  // Für tests auf anderen geräten im gleichen WLAN 
+private readonly apiUrl = 'http://192.168.2.112:3000/todos';
 
   readonly todos = signal<Todo[]>([]);
 
