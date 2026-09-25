@@ -1,9 +1,30 @@
-<article class="todo-item">
-  <button class="check-button" type="button" aria-label="Mark task complete">
+<article class="todo-item" [class.is-complete]="todo().completed">
+  <button
+    class="check-button"
+    type="button"
+    (click)="toggle()"
+    [attr.aria-label]="todo().completed ? 'Mark task open' : 'Mark task complete'">
+
+    @if (todo().completed) {
+      <i class="bi bi-check2"></i>
+    }
   </button>
 
   <div class="todo-copy">
-    <strong>Example task</strong>
-    <span>Due date</span>
+    <strong>{{ todo().title }}</strong>
+
+    @if (todo().dueDate) {
+      <span>Due {{ todo().dueDate }}</span>
+    }
   </div>
+
+  @if (showDelete()) {
+    <button
+      class="delete-button"
+      type="button"
+      (click)="delete()"
+      aria-label="Delete task">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  }
 </article>
