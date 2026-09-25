@@ -1,12 +1,13 @@
 <div class="page-shell home-page">
   <section class="hero">
+    <p class="eyebrow">Your daily dashboard</p>
     <h1>Make today count.</h1>
     <p>Small steps. Real progress.</p>
   </section>
 
   <app-progress
     [completed]="completedCount"
-    [total]="totalCount">
+    [total]="todos().length">
   </app-progress>
 
   <section class="filters" aria-label="Task filters">
@@ -15,7 +16,7 @@
       [class.selected]="filter() === 'all'"
       (click)="setFilter('all')">
       <span>All Tasks</span>
-      <strong>0</strong>
+      <strong>{{ todos().length }}</strong>
     </button>
 
     <button
@@ -23,7 +24,7 @@
       [class.selected]="filter() === 'active'"
       (click)="setFilter('active')">
       <span>Active Tasks</span>
-      <strong>0</strong>
+      <strong>{{ activeCount }}</strong>
     </button>
 
     <button
@@ -31,7 +32,7 @@
       [class.selected]="filter() === 'completed'"
       (click)="setFilter('completed')">
       <span>Completed Tasks</span>
-      <strong>0</strong>
+      <strong>{{ completedCount }}</strong>
     </button>
   </section>
 
@@ -43,11 +44,18 @@
       </div>
 
       <div class="task-list">
-        <div class="empty-state">
-          <i class="bi bi-stars"></i>
-          <strong>A clear slate</strong>
-          <span>No tasks yet.</span>
-        </div>
+        @for (todo of visibleTodos; track todo._id) {
+          <app-todo-item
+            [todo]="todo"
+            (toggleTodo)="toggleTodo($event)">
+          </app-todo-item>
+        } @empty {
+          <div class="empty-state">
+            <i class="bi bi-stars"></i>
+            <strong>A clear slate</strong>
+            <span>Try another view to find the tasks you need.</span>
+          </div>
+        }
       </div>
     </section>
   }
